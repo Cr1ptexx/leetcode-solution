@@ -15,12 +15,16 @@ public:
 
     MyLinkedList() {
         head = nullptr;
-        while (head) {
+    }
+
+    ~MyLinkedList() {
+    while (head) {
         Node* tmp = head;
         head = head->next;
         delete tmp;
     }
-    }
+}
+
     
     int get(int index) {
         Node* current = head;
