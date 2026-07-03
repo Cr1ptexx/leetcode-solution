@@ -15,6 +15,11 @@ public:
 
     MyLinkedList() {
         head = nullptr;
+        while (head) {
+        Node* tmp = head;
+        head = head->next;
+        delete tmp;
+    }
     }
     
     int get(int index) {
