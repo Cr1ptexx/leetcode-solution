@@ -2,10 +2,10 @@ class Solution {
 public:
     int mySqrt(int x) {
         unsigned int i = 1;
-        while(i*i < x){
+        while(i < x/i){
             i++;
         }
-        if(i*i == x) return i;
+        if(i == x/i) return i;
         else return i-1;
     }
 };
