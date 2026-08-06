@@ -10,8 +10,9 @@ public:
        }
        string ans = "";
        while(!st.empty()){
-            ans = st.top() + ans; st.pop();
+            ans.push_back(st.top()); st.pop();
        }
+        reverse(ans.begin() , ans.end());
        return ans;
     }
 };
