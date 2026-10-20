@@ -16,11 +16,13 @@ public:
             return;
         }
         for(int i = start ; i < list.size() ; i++){
-            cur.push_back(i);
-            list[i]--;
-            recur(list , cur , k , i+1);
-            cur.pop_back();
-            list[i]++;
+            if(list[i] != 0){
+                cur.push_back(i);
+                list[i]--;
+                recur(list , cur , k , i);
+                cur.pop_back();
+                list[i]++;
+            }
         }
     }
 };
